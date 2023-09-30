@@ -5,6 +5,6 @@ function doGet() {
 }
 
 function processForm(formObject) {
-  Logger.log(formObject);
+    Logger.log(formObject);
     return "10% верных ответов"
 }
