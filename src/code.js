@@ -1,3 +1,6 @@
 function doGet() {
-    return HtmlService.createHtmlOutputFromFile('page');
+    var t = HtmlService.createTemplateFromFile('page');
+    t.data = MockTest();
+    return t.evaluate();
+
 }
