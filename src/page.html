@@ -16,7 +16,7 @@
 	  google.script.run.withSuccessHandler(showResult).processForm(formObject);
 	  document.getElementById("submit").disabled = true;
       }
-      
+
       function showResult(result) {
 	  var div = document.getElementById('output');
 	  div.innerHTML = result;
@@ -44,8 +44,8 @@
 	  </fieldset>
 	</div>
 	<? } ?>
-	<div><input type="submit" id="submit" value="Завершить тест" /></div>	
+	<div><input type="submit" id="submit" value="Завершить тест" /></div>
       </form>
       <div class="result" id="output"></div>
     </body>
-</html>  
+</html>
