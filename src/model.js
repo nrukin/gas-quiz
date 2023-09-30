@@ -1,5 +1,6 @@
 class question {
-    constructor(text) {
+    constructor(id, text) {
+	this.id = id
 	this.text = text;
 	this.rightAnsID = -1;
 	this.answers = [];

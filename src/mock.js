@@ -5,7 +5,7 @@ function logMockTest() {
 function MockTest() {
     var rs = [];
 
-    q = new question("Кто съел Колобка?");
+    q = new question("q01" ,"Кто съел Колобка?");
     q.addAnswer("Заяц");
     q.addAnswer("Волк");
     q.addAnswer("Медведь");
@@ -13,7 +13,7 @@ function MockTest() {
 
     rs.push(q)
 
-    q = new question("Кто посадил репку?");
+    q = new question("q02" ,"Кто посадил репку?");
     q.addAnswer("Дед", true);
     q.addAnswer("Бабка");
     q.addAnswer("Внучка");

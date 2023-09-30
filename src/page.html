@@ -31,14 +31,13 @@
 	  <input type="text" id="name" name="name"/>
 	</div>
 	<? for (var i = 0; i < data.length; i++) { ?>
-	<? var testID = "test_" + i ?>
 	<div>
 	  <fieldset>
 	    <legend><?= data[i].text ?></legend>
 	    <? for (var j = 0; j < data[i].answers.length; j++) { ?>
-            <? var answerID = testID + "_" + j ?>
+            <? var answerID = data[i].id + "_" + j ?>
             <div>
-              <input type="radio" id=<?= answerID ?> name=<?= testID ?> value=<?= answerID ?> />
+              <input type="radio" id=<?= answerID ?> name=<?= data[i].id ?> value=<?= j ?> />
               <label for=<?= answerID ?>><?= data[i].answers[j] ?></label>
             </div>
 	    <? } ?>
