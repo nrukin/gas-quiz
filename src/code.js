@@ -14,5 +14,13 @@ function processForm(formObject) {
 	}
     }
     Logger.log(rs)
+    addResultRow(formObject.name, data.length, rs)
     return "Правильных ответов: " + rs + " / " + data.length;
+}
+
+function addResultRow(name, tot, rs) {
+    SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Результаты").appendRow(
+	[new Date(),name,rs,tot]
+    );
+
 }
