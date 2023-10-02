@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      function preventFormSubmit() {
-	  var forms = document.querySelectorAll('form');
-	  for (var i = 0; i < forms.length; i++) {
-	      forms[i].addEventListener('submit', function(event) {
-		  event.preventDefault();
-	      });
-	  }
-      }
-      window.addEventListener('load', preventFormSubmit);
-
-      function handleFormSubmit(formObject) {
-	  google.script.run.withSuccessHandler(showResult).processForm(formObject);
-	  document.getElementById("submit").disabled = true;
-      }
-
-      function showResult(result) {
-	  var div = document.getElementById('output');
-	  div.innerHTML = result;
-      }
-    </script>
+    <?!= include('style'); ?>
+    <?!= include('script'); ?>    
   <head>
     <body>
       <h1><?= data.title ?></h1>

@@ -1,3 +1,7 @@
+function include(filename) {
+    return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+
 function doGet() {
     var t = HtmlService.createTemplateFromFile('page');
     t.data = quizDataFromtable();
