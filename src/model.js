@@ -17,6 +17,7 @@ class question {
 
 // Данные теста
 class quizData {
+
     constructor(title, passScore) {
 	this.title = title;
 	this.passScore = passScore;
@@ -25,5 +26,23 @@ class quizData {
 
     addQuestion(q) {
 	this.questions.push(q);
+    }
+
+    // Проверка полученных ответов
+    checkAnswers(ans) {
+	var score = 0;
+	var pass = false;
+	for (var i = 0; i < this.questions.length; i++) {	    
+	    if (this.questions[i].rightAnsID == ans[this.questions[i].id]) {
+		score++
+	    }
+	}
+	if (score >= this.passScore) {
+	    pass = true
+	}
+	return {
+	    "score": score,
+	    "pass": pass
+	};
     }
 }

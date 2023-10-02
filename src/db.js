@@ -33,3 +33,17 @@ function quizDataFromtable() {
     return rs;
     
 }
+
+// Сохраняет результаты теста в таблицу
+function addResultRow(name, check) {
+    spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    spreadsheet.getSheetByName("Результаты").appendRow(
+	[
+	    new Date(),
+	    name,
+	    check.score,
+	    check.pass
+	]
+    );
+    
+}
