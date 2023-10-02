@@ -24,21 +24,21 @@
     </script>
   <head>
     <body>
-      <h1>Русские народные сказки</h1>
+      <h1><?= data.title ?></h1>
       <form onsubmit="handleFormSubmit(this)">
 	<div>
 	  <label for="name">Ваше имя:</label>
 	  <input type="text" id="name" name="name" required/>
 	</div>
-	<? for (var i = 0; i < data.length; i++) { ?>
+	<? for (var i = 0; i < data.questions.length; i++) { ?>
 	<div>
 	  <fieldset>
-	    <legend><?= data[i].text ?></legend>
-	    <? for (var j = 0; j < data[i].answers.length; j++) { ?>
-            <? var answerID = data[i].id + "_" + j ?>
+	    <legend><?= data.questions[i].text ?></legend>
+	    <? for (var j = 0; j < data.questions[i].answers.length; j++) { ?>
+            <? var answerID = data.questions[i].id + "_" + j ?>
             <div>
-              <input type="radio" id=<?= answerID ?> name=<?= data[i].id ?> value=<?= j ?> />
-              <label for=<?= answerID ?>><?= data[i].answers[j] ?></label>
+              <input type="radio" id=<?= answerID ?> name=<?= data.questions[i].id ?> value=<?= j ?> />
+              <label for=<?= answerID ?>><?= data.questions[i].answers[j] ?></label>
             </div>
 	    <? } ?>
 	  </fieldset>
