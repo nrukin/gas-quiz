@@ -5,7 +5,7 @@ function include(filename) {
 function doGet() {
     var t = HtmlService.createTemplateFromFile('page');
     t.data = quizDataFromtable();
-    return t.evaluate();
+    return t.evaluate().setTitle(t.data.title);
 }
 
 function processForm(formObject) {
