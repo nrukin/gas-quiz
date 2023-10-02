@@ -7,25 +7,27 @@
     <body>
       <h1><?= data.title ?></h1>
       <form onsubmit="handleFormSubmit(this)">
-	<div>
-	  <label for="name">Ваше имя:</label>
-	  <input type="text" id="name" name="name" required/>
-	</div>
-	<? for (var i = 0; i < data.questions.length; i++) { ?>
-	<div>
-	  <fieldset>
-	    <legend><?= data.questions[i].text ?></legend>
-	    <? for (var j = 0; j < data.questions[i].answers.length; j++) { ?>
-            <? var answerID = data.questions[i].id + "_" + j ?>
-            <div>
-              <input type="radio" id=<?= answerID ?> name=<?= data.questions[i].id ?> value=<?= j ?> />
-              <label for=<?= answerID ?>><?= data.questions[i].answers[j] ?></label>
-            </div>
-	    <? } ?>
-	  </fieldset>
-	</div>
-	<? } ?>
-	<div><input type="submit" id="submit" value="Завершить тест" /></div>
+	<fieldset id="frmfieldset">
+	  <div>
+	    <label for="name">Ваше имя:</label>
+	    <input type="text" id="name" name="name" required/>
+	  </div>
+	  <? for (var i = 0; i < data.questions.length; i++) { ?>
+	  <div>
+	    <fieldset>
+	      <legend><?= data.questions[i].text ?></legend>
+	      <? for (var j = 0; j < data.questions[i].answers.length; j++) { ?>
+              <? var answerID = data.questions[i].id + "_" + j ?>
+              <div>
+		<input type="radio" id=<?= answerID ?> name=<?= data.questions[i].id ?> value=<?= j ?> />
+		<label for=<?= answerID ?>><?= data.questions[i].answers[j] ?></label>
+              </div>
+	      <? } ?>
+	    </fieldset>
+	  </div>
+	  <? } ?>
+	  <div><input type="submit" id="submit" value="Завершить тест" /></div>
+	</fieldset>
       </form>
       <div class="result" id="output"></div>
     </body>

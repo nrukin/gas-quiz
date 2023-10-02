@@ -11,7 +11,7 @@
 
   function handleFormSubmit(formObject) {
       google.script.run.withSuccessHandler(showResult).processForm(formObject);
-      document.getElementById("submit").disabled = true;
+      document.getElementById("frmfieldset").disabled = true;
   }
 
   function showResult(result) {
