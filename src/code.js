@@ -5,7 +5,8 @@ function include(filename) {
 function doGet() {
     var t = HtmlService.createTemplateFromFile('page');
     t.data = quizDataFromtable();
-    return t.evaluate().setTitle(t.data.title);
+    return t.evaluate().setTitle(t.data.title).
+	addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 
 function processForm(formObject) {
