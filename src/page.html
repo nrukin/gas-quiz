@@ -14,7 +14,7 @@
 	  </div>
 	  <? for (var i = 0; i < data.questions.length; i++) { ?>
 	  <div>
-	    <fieldset>
+	    <fieldset  type="testq">
 	      <legend><?= data.questions[i].text ?></legend>
 	      <? for (var j = 0; j < data.questions[i].answers.length; j++) { ?>
               <? var answerID = data.questions[i].id + "_" + j ?>
