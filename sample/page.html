@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <style>
+      fieldset[type=frmfieldset] {
+	  border: 0;
+      }
+      input[type=text] {
+	  padding: 6px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+      }
+      
+      input[type=submit] {
+	  background-color: #145E6A;
+	  border: none;
+	  color: white;
+	  padding: 12px 32px;
+	  text-decoration: none;
+	  margin: 12px 2px;
+	  cursor: pointer;
+      }
+      fieldset[type="testq"] {
+	  padding: 12px 20px;
+	  margin: 24px 2px;
+      }
+      input[type=radio] {
+	  margin: 6px 2px;
+      }
+    </style>  
+  <head>
+    <body>
+
+      <h1>Русские народные сказки</h1>
+      <form>
+	<fieldset id="frmfieldset" type="frmfieldset">
+	  <div>
+	    <label for="name">Ваше имя:
+	    </label>
+	    <input type="text" id="name" name="name"/>
+	  </div>
+	  <div>
+	    <fieldset type="testq">
+	      <legend>Кто съел колобка?
+	      </legend>
+	      <div>
+		<input type="radio" id="test01_01" name="test01" value="test01_01" />
+		<label for="test01_01">Заяц</label>
+	      </div>
+
+	      <div>
+		<input type="radio" id="test01_02" name="test01" value="test01_02" />
+		<label for="test01_02">Волк</label>
+	      </div>
+
+	      <div>
+		<input type="radio" id="test01_03" name="test01" value="test01_03" />
+		<label for="test01_03">Медведь</label>
+	      </div>
+
+	      <div>
+		<input type="radio" id="test01_04" name="test01" value="test01_04" />
+		<label for="test01_04">Лиса</label>
+	      </div>
+	      
+	    </fieldset>
+	  </div>
+
+	  <div>
+	    <fieldset>
+	      <legend>Кто посадил репку?
+	      </legend>
+	      <div>
+		<input type="radio" id="test02_01" name="test02" value="test02_01" />
+		<label for="test02_01">Дед</label>
+	      </div>
+	      <div>
+		<input type="radio" id="test02_02" name="test02" value="test02_02" />
+		<label for="test02_02">Бабка</label>
+	      </div>
+	      <div>
+		<input type="radio" id="test02_03" name="test02" value="test02_03" />
+		<label for="test02_03">Внучка</label>
+	      </div>
+	      <div>
+		<input type="radio" id="test02_04" name="test02" value="test02_04" />
+		<label for="test02_04">Жучка</label>
+	      </div>
+	      <div>
+		<input type="radio" id="test02_05" name="test02" value="test02_05" />
+		<label for="test02_05">Кошка</label>
+	      </div>
+	      <div>
+		<input type="radio" id="test02_06" name="test02" value="test02_06" />
+		<label for="test02_06">Мышка</label>
+	      </div>	  	    
+	    </fieldset>
+	  </div>
+	  <div>
+	    <input type="submit" id="submit" value="Завершить тест" />
+	  </div>
+	</fieldset>
+      </form>
+    </body>
+</html>  
